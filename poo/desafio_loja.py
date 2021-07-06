@@ -1,5 +1,5 @@
 from datetime import datetime
-from .loja import Cliente, Vendedor, Compra
+from loja import Cliente, Vendedor, Compra
 
 
 def main():
@@ -9,7 +9,7 @@ def main():
     compra2 = Compra(cliente, datetime(2018, 6, 4), 256)
     cliente.registrar_compra(compra1)
     cliente.registrar_compra(compra2)
-    print(f'Cliente: {cliente}', '(adulto)' if cliente.is_adulto() else '')
+    print(f'Cliente: {cliente}', '(adulto)' if cliente.is_adult() else '')
     print(f'Vendedor: {vendedor}')
 
     valor_total = cliente.total_compras()
